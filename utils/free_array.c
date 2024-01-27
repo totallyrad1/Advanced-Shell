@@ -6,7 +6,7 @@
 /*   By: asnaji <asnaji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 17:23:12 by yzaazaa           #+#    #+#             */
-/*   Updated: 2024/01/22 12:21:02 by asnaji           ###   ########.fr       */
+/*   Updated: 2024/01/27 14:37:12 by asnaji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ void	ft_free_array(char **array)
 	int	i;
 
 	i = 0;
-	while (array[i])
+	if(array)
 	{
-		free(array[i]);
-		i++;
+		while (array[i])
+		{
+			free(array[i]);
+			i++;
+		}
+		free(array);
 	}
-	free(array);
 }
