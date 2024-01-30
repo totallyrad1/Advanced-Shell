@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asnaji <asnaji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yzaazaa <yzaazaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 13:17:14 by asnaji            #+#    #+#             */
-/*   Updated: 2024/01/30 14:18:38 by asnaji           ###   ########.fr       */
+/*   Updated: 2024/01/30 20:43:55 by yzaazaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,19 @@ void	ft_free_cmd(t_token *lst)
 		free(lastnode->cmd);
 		free(lastnode);
 	}
+}
+
+t_token	*init_token()
+{
+	t_token	*cmd;
+	
+	cmd = malloc(sizeof(t_token)); 
+	if (!cmd)
+		exit(2);
+	cmd->visited = 0;
+	cmd->spaceafter = 0;
+	cmd->next = NULL;
+	cmd->cmd = NULL;
+	cmd->prev = NULL;
+	return (cmd);
 }
