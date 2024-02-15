@@ -6,7 +6,7 @@
 /*   By: asnaji <asnaji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:59:54 by asnaji            #+#    #+#             */
-/*   Updated: 2024/02/14 11:19:59 by asnaji           ###   ########.fr       */
+/*   Updated: 2024/02/15 17:04:04 by asnaji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,6 @@ int	islimiter1(int c)
 {
 	if (c == '<' || c == '>')
 		return (1);
-	if ( c == '|' || c == '&')
-		return (1);
-	return (0);
-}
-
-int	isredirection(int c)
-{
-	if ( c == '>' || c == '<')
-		return (1);
-	return (0);
-}
-
-int	islimiter2(int c)
-{
 	if ( c == '|' || c == '&')
 		return (1);
 	return (0);
