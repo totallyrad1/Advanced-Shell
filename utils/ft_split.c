@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzaazaa <yzaazaa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: asnaji <asnaji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:44:50 by asnaji            #+#    #+#             */
-/*   Updated: 2024/02/20 23:57:53 by yzaazaa          ###   ########.fr       */
+/*   Updated: 2024/02/21 16:38:01 by asnaji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,23 +56,6 @@ static char	*getword(size_t *i, char const *s, char c)
 	res[j] = '\0';
 	return (res);
 }
-
-// static char	**freemem(char **str)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	if (str)
-// 	{
-// 		while (str[i])
-// 		{
-// 			free(str[i]);
-// 			i++;
-// 		}
-// 		free(str);
-// 	}
-// 	return (NULL);
-// }
 
 char	**ft_split(char const *s, char c)
 {
